@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OnlyJS - Combinators</title>
+  <style>
+    /* css'teki inheritence özelliğinin işimizi bozmaması için 
+      li'lere color: black tanımlaması yapıyoruz */
+    li {
+      color: black;
+      ;
+    }
+
+    /* #combinator-list li {
+        color: red;
+      } */
+
+    /* .summary > li {
+        color: red;
+      } */
+
+    h1,
+    #chocolate, #chocolate ~ li ~li ~li {
+      color: red;
+    }
+
+    /* #chocolate + li + li +li +li{
+        color: red;
+      } */
+  </style>
+</head>
+
+<body>
+  <h1>Combinator'lar</h1>
+  <br />
+  <br />
+  <ul class="summary">
+    <li>Combinator'lar 2 selector (seçici) arasındaki ilişkiyi tanımlar</li>
+    <li id="combinator-list">
+      Toplam 4 adet combinator vardır:
+      <ul>
+        <li>Descendant (soy) combinator’ı ---&gt; (<code> </code>)</li>
+        <li id="chocolate"> Child (çocuk) combinator’ı ---&gt; (<code>&gt;</code>)</li>
+        <li>General sibling (genel kardeş) combinator’ı ---&gt; (<code>~</code>)</li>
+        <li>Adjacent sibling (sonraki kardeş) combinator’ı ---&gt;(<code>+</code>)</li>
+        <li>1 Adjacent sibling (sonraki kardeş) combinator’ı ---&gt;(<code>+</code>)</li>
+        <li>2 Adjacent sibling (sonraki kardeş) combinator’ı ---&gt;(<code>+</code>)</li>
+      </ul>
+    </li>
+  </ul>
+</body>
+
+</html>
